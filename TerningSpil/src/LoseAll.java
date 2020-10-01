@@ -1,9 +1,9 @@
 //This is loose all bracnh
 //Test with developer Branch
 //Spilleren mister alle sine point hvis spilleren slår to 1'ere
-public class LooseAll {
+public class LoseAll {
 
-    public static LooseAll (Player current, Dice d1, Dice d2){
+    public static LoseAll(Player current, Dice d1, Dice d2){
 
         private boolean P1,P2;
         private int d1, d2;
@@ -21,4 +21,5 @@ public class LooseAll {
         }
 
     }
+
 }
