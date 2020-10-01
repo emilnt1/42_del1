@@ -4,12 +4,14 @@ public class Player {
     private int score;
     private int lastD1;
     private int lastD2;
+    private int suddenD;
 
     // Laver en constructor for player classen, som holder på scoren.
-    public Player(int value, int d1, int d2){
+    public Player(int value, int d1, int d2, int sudden){
         score = value;
         lastD1 = d1;
         lastD2 = d2;
+        suddenD = sudden;
     }
 
     public void setLastD1(int d1) {
@@ -26,6 +28,14 @@ public class Player {
 
     public int getLastD2(){
         return lastD2;
+    }
+
+    public void setSuddenD(int sudden) {
+        suddenD = sudden;
+    }
+
+    public int getSuddenD() {
+        return suddenD;
     }
 
     // Sætter scoren til at være lig med værdien.

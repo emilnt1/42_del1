@@ -20,7 +20,7 @@ public class Dice {  // class "dice" is defined
     }
 
     public String toString(){  //A string that says what you rolled
-        String ln = "value" + getFacevalue();
+        String ln = "Value: " + getFacevalue();
         return ln;
     }
 

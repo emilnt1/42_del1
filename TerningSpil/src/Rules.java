@@ -64,6 +64,8 @@ public class Rules {
         if((current.getLastD1() == 6) && (current.getLastD2() == 6) && (d1.getFacevalue() == 6) && (d2.getFacevalue() == 6)) {
             current.setScore(40);
         }
+        current.setLastD1(d1.getFacevalue());
+        current.setLastD2(d2.getFacevalue());
     }
 
 
