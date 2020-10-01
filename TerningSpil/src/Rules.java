@@ -46,7 +46,7 @@ public class Rules {
 
     public static void extraTurn (Dice d1, Dice d2, Rules ID){
 
-        if (d1 == d2){
+        if (d1.getFacevalue() == d2.getFacevalue()){
             if (ID.getPlayerID() == 1){
                 ID.setPlayerID(2);
 
@@ -58,6 +58,12 @@ public class Rules {
 
         }
 
+    }
+
+    public static void win (Player current, Dice d1, Dice d2){
+        if((current.getLastD1() == 6) && (current.getLastD2() == 6) && (d1.getFacevalue() == 6) && (d2.getFacevalue() == 6)) {
+            current.setScore(40);
+        }
     }
 
 
