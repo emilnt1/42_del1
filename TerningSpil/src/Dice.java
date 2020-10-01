@@ -1,25 +1,25 @@
 import java.lang.Math;
 
-public class Dice {  //her defineres klassen "Dice"
-    private final int MAX =6; //værdi af terning kan max være 6
-    private int facevalue; //facevalue er den int, som beskriver hvad terningen slår
+public class Dice {  // class "dice" is defined
+    private final int MAX =6; //the max value of the dice is 6
+    private int facevalue;
 
-    public Dice(int value){ //giver dicen en int value
-        facevalue = value; //
+    public Dice(int value){ //Assigns "Dice" an int value
+        facevalue = value;
     }
 
 
-    public int getFacevalue() { //her henter systemet facevaluen
+    public int getFacevalue() { //Gets the facevalue int
         return facevalue;
     }
 
 
-    public int rollDice(){ // den int value man får efter man har slået med terningen
+    public int rollDice(){ // The int value you get after rolling the dice
         facevalue = (int)(Math.random()*6)+1;
         return facevalue;
     }
 
-    public String toString(){  //en string der siger hvad man har slået
+    public String toString(){  //A string that says what you rolled
         String ln = "value" + getFacevalue();
         return ln;
     }
