@@ -32,15 +32,9 @@ public class Main {
                 Rules.win(current, D1, D2);
                 Display.display(D1, D2, P1, P2);
                 System.out.println("Player " + player.getPlayerID() + "'s turn");
-                if (current.getScore() >= 40) {
-                    if (player.getPlayerID() == 1) {
-                        System.out.println("Player 2 wins");
-                    } else {
-                        System.out.println("Player 1 wins");
-                    }
-                    break;
-                }
+                Rules.suddenD(current);
             }
+                Rules.suddenD(current);
         }
     }
 

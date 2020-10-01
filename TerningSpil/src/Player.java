@@ -55,7 +55,8 @@ public class Player {
 
     // Scoren fra vores getScore() bliver lagt ind i en string og stringen bliver dernest returneret
     public String toString(){
-        String ln = "Score: " + getScore();
+        String ln;
+        ln = "Score: " + getScore();
         return ln;
     }
 }

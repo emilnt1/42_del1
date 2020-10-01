@@ -68,6 +68,12 @@ public class Rules {
         current.setLastD2(d2.getFacevalue());
     }
 
+    public static void suddenD(Player current){
+        if(current.getScore() >= 40){
+            current.setSuddenD(1);
+        }
+    }
+
 
 }
 
