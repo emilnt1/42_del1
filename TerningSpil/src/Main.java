@@ -1,9 +1,16 @@
+import gui_main.GUI;
 
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        GUI gui = new GUI();
+
+
+
+
+                //From here the main version.
         Player P1 = new Player(0);
         Player P2 = new Player(0);
         Player current;
@@ -16,8 +23,9 @@ public class Main {
         Scanner input = new Scanner(System.in);
         while(input.hasNextLine()){
             input.next();
-            D1.rollDice();
-            D2.rollDice();
+            gui.setDice(D1.rollDice(), D2.rollDice());
+
+
             current = Rules.shiftPlayer(P1,P2,player);
             Rules.addToScore(D1,D2,current);
             Rules.loseAll(D1,D2,current);
