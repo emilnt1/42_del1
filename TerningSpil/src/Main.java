@@ -30,8 +30,8 @@ public class Main {
             Rules.addToScore(D1,D2,current);
             Rules.loseAll(D1,D2,current);
             Rules.extraTurn(D1,D2,player);
-            Rules.win(D1,D2,D3,D4,current);
-            Display.Display(D1,D2,P1,P2);
+           // Rules.win(D1,D2,D3,D4,current);
+            //Display.Display(D1,D2,P1,P2);
             System.out.println("Player " + player.getPlayerID()+"'s turn");
             if(current.getScore() >= 40){
                 if(player.getPlayerID()==1){
