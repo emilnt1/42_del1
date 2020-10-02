@@ -17,21 +17,27 @@ public class Main {
         Dice D2 = new Dice(0);
         String word;
 
+        //the scanner is initialised.
         Scanner input = new Scanner(System.in);
 
         System.out.println("To start game press anything and press enter, to exit write \"exit\" and press enter.");
         System.out.println("To roll press the roll button on the interface.");
 
         while(input.hasNext()) {
+
             word = input.nextLine().toLowerCase();
+
             if(word.equals("exit")) {
                 System.exit(0);
             }
+
+            //All the constants used in the game
             D1.setFacevalue(0);
             D2.setFacevalue(0);
             P1.reset();
             P2.reset();
             player.setPlayerID(1);
+
                 while(gui.getUserLeftButtonPressed("Press left button to roll","roll","-")){
                     gui.setDice(D1.rollDice(), D2.rollDice());
                     current = Rules.shiftPlayer(P1, P2, player);
