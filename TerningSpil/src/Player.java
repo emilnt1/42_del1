@@ -6,6 +6,7 @@ public class Player {
     private int lastD2;
     private int suddenD;
 
+
     // Laver en constructor for player classen, som holder på scoren.
     public Player(int value, int d1, int d2, int sudden){
         score = value;
