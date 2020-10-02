@@ -18,18 +18,13 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         // Prints instructions
-        System.out.println("To start game press anything and press enter, to exit write \"exit\" and press enter.");
-        System.out.println("To roll press the roll button on the interface.");
+        System.out.println("The scoreboard will appear here");
 
-        // As long as there's an input the while loop will run.
-        while(input.hasNext())
+
+        // While loop executes when button is pressed
+        while(gui.getUserButtonPressed("Press START","START").equals("START"))
         {
-            // Converts the input to lowercase.
-            word = input.nextLine().toLowerCase();
-            // If the input is "exit" then the program will be terminated.
-            if(word.equals("exit")) {
-                System.exit(0);
-            }
+
 
             //All the constants used in the game
             D1.setFacevalue(0);
@@ -39,7 +34,7 @@ public class Main {
             player.setPlayerID(1);
 
                 //The while loop wait for a button press in the gui.
-                while(gui.getUserLeftButtonPressed("Press left button to roll","roll","-")){
+                while(gui.getUserButtonPressed("Press ROLL to roll","ROLL").equals("ROLL")){
                     //The dices is rolled and the gui dices are rolled.
                     gui.setDice(D1.rollDice(), D2.rollDice());
 
@@ -75,7 +70,16 @@ public class Main {
 
             // Prints out the winner and then further instructions.
             System.out.println("Player " + player.getPlayerID() + " wins");
-            System.out.println("To restart game press anything and press enter, to exit write \"exit\" and press enter.");
+            gui.showMessage("Player " + player.getPlayerID() + " wins");
+
+
+
+            if(gui.getUserLeftButtonPressed("Press RESTART or EXIT","RESTART","EXIT")){
+
+            }
+            else
+                System.exit(0);
+
         }
     }
 }
