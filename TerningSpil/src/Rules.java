@@ -74,8 +74,6 @@ public class Rules {
             current.setSuddenD(1);
         }
     }
-
-
 }
 
 
