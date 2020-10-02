@@ -60,12 +60,16 @@ public class Rules {
 
     }
 
-    public static void win (Player current, Dice d1, Dice d2){
+    public static boolean win (Player current, Dice d1, Dice d2){
         if((current.getLastD1() == 6) && (current.getLastD2() == 6) && (d1.getFacevalue() == 6) && (d2.getFacevalue() == 6)) {
-            current.setScore(40);
+            current.setLastD1(d1.getFacevalue());
+            current.setLastD2(d2.getFacevalue());
+            return true;
+        } else {
+            current.setLastD1(d1.getFacevalue());
+            current.setLastD2(d2.getFacevalue());
+            return false;
         }
-        current.setLastD1(d1.getFacevalue());
-        current.setLastD2(d2.getFacevalue());
     }
 
     public static void suddenD(Player current){
