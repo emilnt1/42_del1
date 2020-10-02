@@ -26,6 +26,9 @@ public class Main {
         while(input.hasNextLine()) {
             D1.setFacevalue(0);
             D2.setFacevalue(0);
+            P1.reset();
+            P2.reset();
+            player.setPlayerID(1);
             System.out.println("Press any button and then press enter to roll:");
             while (input.hasNextLine()) {
                 input.next();

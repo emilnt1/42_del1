@@ -54,6 +54,13 @@ public class Player {
         return score;
     }
 
+    public void reset (){
+        score = 0;
+        lastD1 = 0;
+        lastD2 = 0;
+        suddenD = 0;
+    }
+
     // Scoren fra vores getScore() bliver lagt ind i en string og stringen bliver dernest returneret
     public String toString(){
         String ln;
