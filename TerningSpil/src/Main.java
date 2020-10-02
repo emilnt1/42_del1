@@ -15,7 +15,7 @@ public class Main {
         Rules player = new Rules(1);
         Dice D1 = new Dice(0);
         Dice D2 = new Dice(0);
-        String word = "";
+        String word;
 
         Scanner input = new Scanner(System.in);
 
