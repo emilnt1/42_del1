@@ -67,6 +67,7 @@ public class Main {
             System.out.println("Player " + player.getPlayerID() + " wins");
             System.out.println("To restart game press anything and press enter, to \"exit\"  write exit and press enter.");
         }
+        input.close();
     }
 
 
