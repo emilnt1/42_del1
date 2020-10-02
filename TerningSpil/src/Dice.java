@@ -1,7 +1,6 @@
 import java.lang.Math;
 
 public class Dice {  // class "dice" is defined
-    private final int MAX =6; //the max value of the dice is 6
     private int facevalue;
 
     public Dice(int value){ //Assigns "Dice" an int value
@@ -20,8 +19,7 @@ public class Dice {  // class "dice" is defined
     }
 
     public String toString(){  //A string that says what you rolled
-        String ln = "Value: " + getFacevalue();
-        return ln;
+        return "Value: " + getFacevalue();
     }
 
     public void setFacevalue(int value) {

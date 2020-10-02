@@ -41,25 +41,22 @@ public class Rules {
             current.setScore(0);
         }
 
-
     }
-
+    // Adds an extra turn if the dice have the same value.
+    // This is done by changing the playerID back again.
     public static void extraTurn (Dice d1, Dice d2, Rules ID){
 
         if (d1.getFacevalue() == d2.getFacevalue()){
             if (ID.getPlayerID() == 1){
                 ID.setPlayerID(2);
-
-
             } else {
                 ID.setPlayerID(1);
-
             }
-
         }
-
     }
 
+    //Checks if the lastDice constant of the current player construct and the current Dice values all are sixes.
+    //It also takes the current dice values and saves them as lastDice values.
     public static boolean win (Player current, Dice d1, Dice d2){
         if((current.getLastD1() == 6) && (current.getLastD2() == 6) && (d1.getFacevalue() == 6) && (d2.getFacevalue() == 6)) {
             current.setLastD1(d1.getFacevalue());
@@ -71,14 +68,12 @@ public class Rules {
             return false;
         }
     }
-
+    //If the score value reaches 40 the the suddenD constant of the Player is changed to one.
     public static void suddenD(Player current){
         if(current.getScore() >= 40){
             current.setSuddenD(1);
         }
     }
-
-
 }
 
 
