@@ -30,7 +30,7 @@ public class Main {
             player.setPlayerID(1);
             while (input.hasNextLine()) {
                 word = input.nextLine();
-                word.toLowerCase();
+                word = word.toLowerCase();
                 if(word.equals("exit")){
                     break;
                 }
@@ -60,7 +60,7 @@ public class Main {
 
             }
             if(word.equals("exit")) {
-                break;
+                System.exit(0);
             }
             System.out.println("Player " + player.getPlayerID() + " wins");
             System.out.println("To restart game press anything and press enter, to \"exit\"  write exit and press enter.");
