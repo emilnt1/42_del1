@@ -42,7 +42,7 @@ public class Rules {
         }
 
     }
-    // Adds an extra turn if the die's have the same value.
+    // Adds an extra turn if the dice have the same value.
     // This is done by changing the playerID back again.
     public static void extraTurn (Dice d1, Dice d2, Rules ID){
 

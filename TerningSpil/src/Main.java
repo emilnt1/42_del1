@@ -1,12 +1,10 @@
-// Imports GUI and Scanner
 import gui_main.GUI;
 import java.util.Scanner;
-
 
 public class Main {
 
     public static void main(String[] args) {
-        // Instansiates objects
+        // Initializing objects and constants
         GUI gui = new GUI();
         Player P1 = new Player (0,0,0,0);
         Player P2 = new Player (0,0,0,0);
@@ -16,7 +14,7 @@ public class Main {
         Dice D2 = new Dice(0);
         String word;
 
-        // Instansiates scanner
+        //the scanner is initialised.
         Scanner input = new Scanner(System.in);
 
         // Prints instructions
@@ -29,20 +27,27 @@ public class Main {
             // Converts the input to lowercase.
             word = input.nextLine().toLowerCase();
             // If the input is "exit" then the program will be terminated.
-            if(word.equals("exit")) { System.exit(0); }
+            if(word.equals("exit")) {
+                System.exit(0);
+            }
 
-            // Sets facevalue to 0 and resets the players scores.
+            //All the constants used in the game
             D1.setFacevalue(0);
             D2.setFacevalue(0);
             P1.reset();
             P2.reset();
-
-
             player.setPlayerID(1);
+
+                //The while loop wait for a button press in the gui.
                 while(gui.getUserLeftButtonPressed("Press left button to roll","roll","-")){
+                    //The dices is rolled and the gui dices are rolled.
                     gui.setDice(D1.rollDice(), D2.rollDice());
+
+                    //The current player is chosen using the shiftPlayer() method
                     current = Rules.shiftPlayer(P1, P2, player);
 
+                    //If the player has entered the suddenD state.
+                    //To win the player has to get two dice of the same value. Else the round will continue.
                     if (current.getSuddenD() == 1) {
                         Display.display(D1, D2, P1, P2);
                         if (D1.getFacevalue() == D2.getFacevalue()) {
@@ -53,7 +58,7 @@ public class Main {
                             System.out.println();
                         }
                     }
-
+                    //if the player doesn't have a suddenD value of one the normal ruleset is applied.
                     if (current.getSuddenD() == 0) {
                         Rules.addToScore(D1, D2, current);
                         Rules.loseAll(D1, D2, current);
