@@ -1,5 +1,4 @@
 import gui_main.GUI;
-import java.util.Scanner;
 
 public class Main {
 
@@ -12,10 +11,7 @@ public class Main {
         Rules player = new Rules(1);
         Dice D1 = new Dice(0);
         Dice D2 = new Dice(0);
-        String word;
 
-        //the scanner is initialised.
-        Scanner input = new Scanner(System.in);
 
         // Prints instructions
         System.out.println("The scoreboard will appear here");
@@ -74,11 +70,10 @@ public class Main {
 
 
 
-            if(gui.getUserLeftButtonPressed("Press RESTART or EXIT","RESTART","EXIT")){
-
-            }
-            else
+            if(gui.getUserLeftButtonPressed("Press EXIT or RESTART","EXIT","RESTART")) {
                 System.exit(0);
+            }
+
 
         }
     }
