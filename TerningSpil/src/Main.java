@@ -8,8 +8,6 @@ public class Main {
         GUI gui = new GUI();
 
 
-
-
                 //From here the main version.
         Player P1 = new Player (0,0,0,0);
         Player P2 = new Player (0,0,0,0);
